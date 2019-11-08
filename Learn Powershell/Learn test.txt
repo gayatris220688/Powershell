@@ -1,0 +1,16 @@
+string manipulation
+
+https://www.youtube.com/watch?v=-aQWrfqHbjU
+https://4sysops.com/archives/strings-in-powershell-replace-compare-concatenate-split-substring/
+
+palindrome in powershell
+if else
+for each
+array
+write values
+
+
+
+
+
+
