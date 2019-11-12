@@ -23,3 +23,16 @@ Get-ChildItem
 dir
 
 Get-ChildItem |Where-Object{$_.Name.Tolower().Contains("file")}
+
+Get-ChildItem
+$result= Get-Content -Path "C:\GithubPersonal\Learn Powershell\name & copy.txt"
+
+$result
+
+
+Get-ChildItem |Where-Object{$_.Name.Contains("&")}
+Get-ChildItem | Where-Object {$_.Name.Contains("&")} | ForEach-Object {Rename-Item $_ -NewName $_.Name.Replace("&","AND")}
+
+Get-ChildItem
+
+$cow | Get-Member
