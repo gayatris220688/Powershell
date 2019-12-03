@@ -53,3 +53,21 @@ function Switch-Item {
 Switch-Item -on
 
 Switch-Item
+
+$n = 1,8,9,100,99
+
+Write-Host $n | Measure-Object -Maximum
+
+Write-Host $n | measure -Maximum
+
+===
+
+#Find large number in array 
+
+$a = [array]1,2,5,6,3,2,9,1
+
+$a | measure -Maximum
+
+#Find small number in array 
+
+$a | measure -Minimum
