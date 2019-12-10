@@ -1,0 +1,453 @@
+
+PS C:\GithubPersonal\DocDb> 
+$mainJson =  "C:\GithubPersonal\DocDb\MainJson.json"
+$valueJson = "C:\GithubPersonal\DocDb\ValueJson.json" 
+
+
+PS C:\GithubPersonal\DocDb> $main = Get-Content -Path $mainJson  | Out-String | ConvertFrom-Json
+$value = Get-Content -Path $valueJson  | Out-String | ConvertFrom-Json
+
+PS C:\GithubPersonal\DocDb> $params = @();
+
+
+PS C:\GithubPersonal\DocDb> $params = $($value.MetaData | Get-Member -MemberType Property).Name
+
+
+PS C:\GithubPersonal\DocDb> $params = $($value.MetaData.ChangeFeedLeaseCollectionOfferThroughput  | Get-Member -MemberType Property).Name
+
+
+PS C:\GithubPersonal\DocDb> $main.DocDbPools
+
+rpEnvPrefixes               resourcePools                                                                                                                                                                
+-------------               -------------                                                                                                                                                                
+{dailystress, prerelstress} {@{PoolName=digitaltwindocdb-1; CollectionOfferThroughput=; QueryCollectionOfferThroughput=; ChangeFeedLeaseCollectionOfferThroughput=}, @{PoolName=documentdb2-collection...
+{stressdm, prereldm}        {@{poolName=documentdb-collection-1; CollectionOfferThroughput=; QueryCollectionOfferThroughput=; ChangeFeedLeaseCollectionOfferThroughput=}, @{poolName=documentdb2-colle...
+
+
+
+PS C:\GithubPersonal\DocDb> C:\GithubPersonal\DocDb\DBjson.ps1
+cmdlet DBjson.ps1 at command pipeline position 1
+Supply values for the following parameters:
+PoolName: 
+PS C:\GithubPersonal\DocDb> C:\GithubPersonal\DocDb\DBjson.ps1
+cmdlet DBjson.ps1 at command pipeline position 1
+Supply values for the following parameters:
+PoolName: asdasd
+Max: asdasd
+Cannot recognize "asdasd" as a System.Int32 due to a format error.
+Max: 123
+Min: 12
+
+Hit Line breakpoint on 'C:\GithubPersonal\DocDb\DBjson.ps1:17'
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main
+
+DocDbPools                                                                                                                        
+----------                                                                                                                        
+{@{rpEnvPrefixes=System.Object[]; resourcePools=System.Object[]}, @{rpEnvPrefixes=System.Object[]; resourcePools=System.Object[]}}
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main | gm
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition                         
+----        ----------   ----------                         
+Equals      Method       bool Equals(System.Object obj)     
+GetHashCode Method       int GetHashCode()                  
+GetType     Method       type GetType()                     
+ToString    Method       string ToString()                  
+DocDbPools  NoteProperty Object[] DocDbPools=System.Object[]
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools
+
+rpEnvPrefixes               resourcePools                                                                                                                                                                
+-------------               -------------                                                                                                                                                                
+{dailystress, prerelstress} {@{PoolName=digitaltwindocdb-1; CollectionOfferThroughput=; QueryCollectionOfferThroughput=; ChangeFeedLeaseCollectionOfferThroughput=}, @{PoolName=documentdb2-collection...
+{stressdm, prereldm}        {@{poolName=documentdb-collection-1; CollectionOfferThroughput=; QueryCollectionOfferThroughput=; ChangeFeedLeaseCollectionOfferThroughput=}, @{poolName=documentdb2-colle...
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools
+
+PoolName                CollectionOfferThroughput              QueryCollectionOfferThroughput        ChangeFeedLeaseCollectionOfferThroughput
+--------                -------------------------              ------------------------------        ----------------------------------------
+digitaltwindocdb-1      @{Min=400; scenarios=System.Object[]}  @{Min=0; scenarios=System.Object[]}   @{Min=0; scenarios=System.Object[]}     
+documentdb2-collection  @{Min=500; scenarios=System.Object[]}  @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-1 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-2 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-3 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-4 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-5 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-6 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-7 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-8 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+PS C:\GithubPersonal\DocDb> C:\GithubPersonal\DocDb\DBjson.ps1
+cmdlet DBjson.ps1 at command pipeline position 1
+Supply values for the following parameters:
+PoolName: adsad
+Max: 12
+Min: 12
+
+Hit Line breakpoint on 'C:\GithubPersonal\DocDb\DBjson.ps1:17'
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main
+
+DocDbPools                                                                                                                        
+----------                                                                                                                        
+{@{rpEnvPrefixes=System.Object[]; resourcePools=System.Object[]}, @{rpEnvPrefixes=System.Object[]; resourcePools=System.Object[]}}
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools
+
+rpEnvPrefixes               resourcePools                                                                                                                                                                
+-------------               -------------                                                                                                                                                                
+{dailystress, prerelstress} {@{PoolName=digitaltwindocdb-1; CollectionOfferThroughput=; QueryCollectionOfferThroughput=; ChangeFeedLeaseCollectionOfferThroughput=}, @{PoolName=documentdb2-collection...
+{stressdm, prereldm}        {@{poolName=documentdb-collection-1; CollectionOfferThroughput=; QueryCollectionOfferThroughput=; ChangeFeedLeaseCollectionOfferThroughput=}, @{poolName=documentdb2-colle...
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0]
+
+rpEnvPrefixes               resourcePools                                                                                                                                                                
+-------------               -------------                                                                                                                                                                
+{dailystress, prerelstress} {@{PoolName=digitaltwindocdb-1; CollectionOfferThroughput=; QueryCollectionOfferThroughput=; ChangeFeedLeaseCollectionOfferThroughput=}, @{PoolName=documentdb2-collection...
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main | ConvertTo-Json
+{
+    "DocDbPools":  [
+                       {
+                           "rpEnvPrefixes":  "dailystress prerelstress",
+                           "resourcePools":  "         "
+                       },
+                       {
+                           "rpEnvPrefixes":  "stressdm prereldm",
+                           "resourcePools":  "     "
+                       }
+                   ]
+}
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0]
+
+rpEnvPrefixes               resourcePools                                                                                                                                                                
+-------------               -------------                                                                                                                                                                
+{dailystress, prerelstress} {@{PoolName=digitaltwindocdb-1; CollectionOfferThroughput=; QueryCollectionOfferThroughput=; ChangeFeedLeaseCollectionOfferThroughput=}, @{PoolName=documentdb2-collection...
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools
+
+PoolName                CollectionOfferThroughput              QueryCollectionOfferThroughput        ChangeFeedLeaseCollectionOfferThroughput
+--------                -------------------------              ------------------------------        ----------------------------------------
+digitaltwindocdb-1      @{Min=400; scenarios=System.Object[]}  @{Min=0; scenarios=System.Object[]}   @{Min=0; scenarios=System.Object[]}     
+documentdb2-collection  @{Min=500; scenarios=System.Object[]}  @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-1 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-2 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-3 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-4 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-5 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-6 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-7 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-8 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools[2]
+
+PoolName                CollectionOfferThroughput              QueryCollectionOfferThroughput        ChangeFeedLeaseCollectionOfferThroughput
+--------                -------------------------              ------------------------------        ----------------------------------------
+documentdb-collection-1 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools[2].QueryCollectionOfferThroughput
+
+Min scenarios                                                 
+--- ---------                                                 
+400 {@{scenarioName=ConnectivityStressScenario.ste; Max=6500}}
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools[2].QueryCollectionOfferThroughput.Min
+400
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools[2].QueryCollectionOfferThroughput.Min | gm
+
+
+   TypeName: System.Int32
+
+Name        MemberType Definition                                                                                                                                                                        
+----        ---------- ----------                                                                                                                                                                        
+CompareTo   Method     int CompareTo(System.Object value), int CompareTo(int value), int IComparable.CompareTo(System.Object obj), int IComparable[int].CompareTo(int other)                             
+Equals      Method     bool Equals(System.Object obj), bool Equals(int obj), bool IEquatable[int].Equals(int other)                                                                                      
+GetHashCode Method     int GetHashCode()                                                                                                                                                                 
+GetType     Method     type GetType()                                                                                                                                                                    
+GetTypeCode Method     System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()                                                                                                         
+ToBoolean   Method     bool IConvertible.ToBoolean(System.IFormatProvider provider)                                                                                                                      
+ToByte      Method     byte IConvertible.ToByte(System.IFormatProvider provider)                                                                                                                         
+ToChar      Method     char IConvertible.ToChar(System.IFormatProvider provider)                                                                                                                         
+ToDateTime  Method     datetime IConvertible.ToDateTime(System.IFormatProvider provider)                                                                                                                 
+ToDecimal   Method     decimal IConvertible.ToDecimal(System.IFormatProvider provider)                                                                                                                   
+ToDouble    Method     double IConvertible.ToDouble(System.IFormatProvider provider)                                                                                                                     
+ToInt16     Method     int16 IConvertible.ToInt16(System.IFormatProvider provider)                                                                                                                       
+ToInt32     Method     int IConvertible.ToInt32(System.IFormatProvider provider)                                                                                                                         
+ToInt64     Method     long IConvertible.ToInt64(System.IFormatProvider provider)                                                                                                                        
+ToSByte     Method     sbyte IConvertible.ToSByte(System.IFormatProvider provider)                                                                                                                       
+ToSingle    Method     float IConvertible.ToSingle(System.IFormatProvider provider)                                                                                                                      
+ToString    Method     string ToString(), string ToString(string format), string ToString(System.IFormatProvider provider), string ToString(string format, System.IFormatProvider provider), string IF...
+ToType      Method     System.Object IConvertible.ToType(type conversionType, System.IFormatProvider provider)                                                                                           
+ToUInt16    Method     uint16 IConvertible.ToUInt16(System.IFormatProvider provider)                                                                                                                     
+ToUInt32    Method     uint32 IConvertible.ToUInt32(System.IFormatProvider provider)                                                                                                                     
+ToUInt64    Method     uint64 IConvertible.ToUInt64(System.IFormatProvider provider)                                                                                                                     
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools[2].QueryCollectionOfferThroughput | gm
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition                        
+----        ----------   ----------                        
+Equals      Method       bool Equals(System.Object obj)    
+GetHashCode Method       int GetHashCode()                 
+GetType     Method       type GetType()                    
+ToString    Method       string ToString()                 
+Min         NoteProperty int Min=400                       
+scenarios   NoteProperty Object[] scenarios=System.Object[]
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools[2].QueryCollectionOfferThroughput.Min = 100
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools[2].QueryCollectionOfferThroughpu
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools[2].QueryCollectionOfferThroughput
+
+Min scenarios                                                 
+--- ---------                                                 
+100 {@{scenarioName=ConnectivityStressScenario.ste; Max=6500}}
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+PS C:\GithubPersonal\DocDb> $main | gm
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition                         
+----        ----------   ----------                         
+Equals      Method       bool Equals(System.Object obj)     
+GetHashCode Method       int GetHashCode()                  
+GetType     Method       type GetType()                     
+ToString    Method       string ToString()                  
+DocDbPools  NoteProperty Object[] DocDbPools=System.Object[]
+
+
+
+PS C:\GithubPersonal\DocDb> $main.DocDbPools | gm
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name          MemberType   Definition                            
+----          ----------   ----------                            
+Equals        Method       bool Equals(System.Object obj)        
+GetHashCode   Method       int GetHashCode()                     
+GetType       Method       type GetType()                        
+ToString      Method       string ToString()                     
+resourcePools NoteProperty Object[] resourcePools=System.Object[]
+rpEnvPrefixes NoteProperty Object[] rpEnvPrefixes=System.Object[]
+
+
+
+PS C:\GithubPersonal\DocDb> $main.DocDbPools[0]
+
+rpEnvPrefixes               resourcePools                                                                                                                                                                
+-------------               -------------                                                                                                                                                                
+{dailystress, prerelstress} {@{PoolName=digitaltwindocdb-1; CollectionOfferThroughput=; QueryCollectionOfferThroughput=; ChangeFeedLeaseCollectionOfferThroughput=}, @{PoolName=documentdb2-collection...
+
+
+
+PS C:\GithubPersonal\DocDb> $main.DocDbPools[0].resourcePools
+
+PoolName                CollectionOfferThroughput              QueryCollectionOfferThroughput        ChangeFeedLeaseCollectionOfferThroughput
+--------                -------------------------              ------------------------------        ----------------------------------------
+digitaltwindocdb-1      @{Min=400; scenarios=System.Object[]}  @{Min=0; scenarios=System.Object[]}   @{Min=0; scenarios=System.Object[]}     
+documentdb2-collection  @{Min=500; scenarios=System.Object[]}  @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-1 @{Min=4000; scenarios=System.Object[]} @{Min=100; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-2 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-3 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-4 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-5 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-6 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-7 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+documentdb-collection-8 @{Min=4000; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]} @{Min=400; scenarios=System.Object[]}   
+
+
+
+PS C:\GithubPersonal\DocDb> C:\GithubPersonal\DocDb\DBjson.ps1
+cmdlet DBjson.ps1 at command pipeline position 1
+Supply values for the following parameters:
+PoolName: sdsad
+Max: 12
+Min: 10
+
+Hit Line breakpoint on 'C:\GithubPersonal\DocDb\DBjson.ps1:17'
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $resourcePools | Select CollectionOfferThroughput
+
+CollectionOfferThroughput             
+-------------------------             
+@{Min=400; scenarios=System.Object[]} 
+@{Min=500; scenarios=System.Object[]} 
+@{Min=4000; scenarios=System.Object[]}
+@{Min=4000; scenarios=System.Object[]}
+@{Min=4000; scenarios=System.Object[]}
+@{Min=4000; scenarios=System.Object[]}
+@{Min=4000; scenarios=System.Object[]}
+@{Min=4000; scenarios=System.Object[]}
+@{Min=4000; scenarios=System.Object[]}
+@{Min=4000; scenarios=System.Object[]}
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+PS C:\GithubPersonal\DocDb> C:\GithubPersonal\DocDb\DBjson.ps1
+cmdlet DBjson.ps1 at command pipeline position 1
+Supply values for the following parameters:
+PoolName: 123213
+Max: 12
+Min: 3
+
+Hit Line breakpoint on 'C:\GithubPersonal\DocDb\DBjson.ps1:17'
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $pool
+
+CollectionOfferThroughput            
+-------------------------            
+@{Min=400; scenarios=System.Object[]}
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $pool.CollectionOfferThroughput
+
+Min scenarios                                                  
+--- ---------                                                  
+400 {@{scenarioName=ConnectivityStressScenario.ste; Max=11000}}
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $pool.CollectionOfferThroughput.Min
+400
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $pool.CollectionOfferThroughput.scenarios
+
+scenarioName                     Max
+------------                     ---
+ConnectivityStressScenario.ste 11000
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+PS C:\GithubPersonal\DocDb> C:\GithubPersonal\DocDb\DBjson.ps1
+cmdlet DBjson.ps1 at command pipeline position 1
+Supply values for the following parameters:
+PoolName: 231
+Max: 6000
+Min: 10
+
+Hit Line breakpoint on 'C:\GithubPersonal\DocDb\DBjson.ps1:17'
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+
+Hit Line breakpoint on 'C:\GithubPersonal\DocDb\DBjson.ps1:31'
+[DBG]: PS C:\GithubPersonal\DocDb>> $main | ConvertTo-Json
+{
+    "DocDbPools":  [
+                       {
+                           "rpEnvPrefixes":  "dailystress prerelstress",
+                           "resourcePools":  "         "
+                       },
+                       {
+                           "rpEnvPrefixes":  "stressdm prereldm",
+                           "resourcePools":  "     "
+                       }
+                   ]
+}
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $t = $main | ConvertTo-Json
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0]
+
+rpEnvPrefixes               resourcePools                                                         
+-------------               -------------                                                         
+{dailystress, prerelstress} {@{PoolName=digitaltwindocdb-1; CollectionOfferThroughput=; QueryCo...
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> $main.DocDbPools[0].resourcePools
+
+PoolName                CollectionOfferThroughput QueryCollectionOfferThroughput        ChangeFeed
+                                                                                        LeaseColle
+                                                                                        ctionOffer
+                                                                                        Throughput
+--------                ------------------------- ------------------------------        ----------
+digitaltwindocdb-1      @{Min=10; scenarios=6000} @{Min=0; scenarios=System.Object[]}   @{Min=0...
+documentdb2-collection  @{Min=10; scenarios=6000} @{Min=400; scenarios=System.Object[]} @{Min=4...
+documentdb-collection-1 @{Min=10; scenarios=6000} @{Min=400; scenarios=System.Object[]} @{Min=4...
+documentdb-collection-2 @{Min=10; scenarios=6000} @{Min=400; scenarios=System.Object[]} @{Min=4...
+documentdb-collection-3 @{Min=10; scenarios=6000} @{Min=400; scenarios=System.Object[]} @{Min=4...
+documentdb-collection-4 @{Min=10; scenarios=6000} @{Min=400; scenarios=System.Object[]} @{Min=4...
+documentdb-collection-5 @{Min=10; scenarios=6000} @{Min=400; scenarios=System.Object[]} @{Min=4...
+documentdb-collection-6 @{Min=10; scenarios=6000} @{Min=400; scenarios=System.Object[]} @{Min=4...
+documentdb-collection-7 @{Min=10; scenarios=6000} @{Min=400; scenarios=System.Object[]} @{Min=4...
+documentdb-collection-8 @{Min=10; scenarios=6000} @{Min=400; scenarios=System.Object[]} @{Min=4...
+
+
+
+[DBG]: PS C:\GithubPersonal\DocDb>> 
+PS C:\GithubPersonal\DocDb> C:\GithubPersonal\DocDb\DBjson.ps1
+cmdlet DBjson.ps1 at command pipeline position 1
+Supply values for the following parameters:
+PoolName: abc
+Max: 6000

@@ -1,0 +1,550 @@
+{
+  "DocDbPools": [
+    {
+      "rpEnvPrefixes": [ "dailystress", "prerelstress" ],
+      "resourcePools": [
+        {
+          "PoolName": "digitaltwindocdb-1",
+          "CollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 11000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 0,
+            "scenarios": []
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 0,
+            "scenarios": []
+          }
+        },
+        {
+          "PoolName": "documentdb2-collection",
+          "CollectionOfferThroughput": {
+            "Min": 500,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 11000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "PoolName": "documentdb-collection-1",
+          "CollectionOfferThroughput": {
+            "Min": 4000,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 400000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "PoolName": "documentdb-collection-2",
+          "CollectionOfferThroughput": {
+            "Min": 4000,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 400000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "PoolName": "documentdb-collection-3",
+          "CollectionOfferThroughput": {
+            "Min": 4000,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 400000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "PoolName": "documentdb-collection-4",
+          "CollectionOfferThroughput": {
+            "Min": 4000,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 400000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "PoolName": "documentdb-collection-5",
+          "CollectionOfferThroughput": {
+            "Min": 4000,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 400000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "PoolName": "documentdb-collection-6",
+          "CollectionOfferThroughput": {
+            "Min": 4000,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 400000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "PoolName": "documentdb-collection-7",
+          "CollectionOfferThroughput": {
+            "Min": 4000,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 400000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "PoolName": "documentdb-collection-8",
+          "CollectionOfferThroughput": {
+            "Min": 4000,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 400000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "ConnectivityStressScenario.ste",
+                "Max": 1000
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rpEnvPrefixes": [ "stressdm", "prereldm" ],
+      "resourcePools": [
+        {
+          "poolName": "documentdb-collection-1",
+          "CollectionOfferThroughput": {
+            "min": 6500,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "max": 400000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 250000
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 250000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 1000,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "Max": 100000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 6500
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "Max": 1000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 1000
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "poolName": "documentdb2-collection",
+          "CollectionOfferThroughput": {
+            "min": 6500,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "max": 400000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 250000
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 250000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 1700,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "Max": 100000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 6500
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "Max": 1000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 1000
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "poolName": "[rpEnvPrefix]dr-documentdb-collection-1",
+          "CollectionOfferThroughput": {
+            "min": 6500,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "max": 400000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 11000
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 11000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 1700,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "Max": 100000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 6500
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 6500
+              }
+            ]
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "Max": 1000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 1000
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 1000
+              }
+            ]
+          }
+        },
+        {
+          "poolName": "digitaltwindocdb-1",
+          "CollectionOfferThroughput": {
+            "min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "max": 11000
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 11000
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 11000
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 0,
+            "scenarios": []
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 0,
+            "scenarios": []
+          }
+        },
+        {
+          "poolName": "[rpEnvPrefix]dr-digitaltwindocdb-1",
+          "CollectionOfferThroughput": {
+            "min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "max": 500
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 500
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 500
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 0,
+            "scenarios": []
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 0,
+            "scenarios": []
+          }
+        },
+        {
+          "poolName": "[rpEnvPrefix]dr-digitaltwindocument-collection-2",
+          "CollectionOfferThroughput": {
+            "min": 400,
+            "scenarios": [
+              {
+                "scenarioName": "DeviceTwinE2EScenarioStress.ste",
+                "max": 500
+              },
+              {
+                "scenarioName": "JobServicePerfScenario.ste",
+                "max": 500
+              },
+              {
+                "scenarioName": "JobServiceStressScenario.ste",
+                "max": 500
+              }
+            ]
+          },
+          "QueryCollectionOfferThroughput": {
+            "Min": 0,
+            "scenarios": []
+          },
+          "ChangeFeedLeaseCollectionOfferThroughput": {
+            "Min": 0,
+            "scenarios": []
+          }
+        }
+      ]
+    }
+  ]
+}

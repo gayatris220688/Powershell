@@ -1,0 +1,84 @@
+{
+    "PSVersion":  {
+                      "Max":  4,
+                      "Min":  0,
+                      "Build":  -1,
+                      "Revision":  -1,
+                      "MaxRevision":  -1,
+                      "MinRevision":  -1
+                  },
+    "WSManStackVersion":  {
+                              "Max":  3,
+                              "Min":  0,
+                              "Build":  -1,
+                              "Revision":  -1,
+                              "MaxRevision":  -1,
+                              "MinRevision":  -1
+                          },
+    "SerializationVersion":  {
+                                 "Max":  1,
+                                 "Min":  1,
+                                 "Build":  0,
+                                 "Revision":  1,
+                                 "MaxRevision":  0,
+                                 "MinRevision":  1
+                             },
+    "CLRVersion":  {
+                       "Max":  4,
+                       "Min":  0,
+                       "Build":  30319,
+                       "Revision":  42000,
+                       "MaxRevision":  0,
+                       "MinRevision":  -23536
+                   },
+    "BuildVersion":  {
+                         "Max":  6,
+                         "Min":  3,
+                         "Build":  9600,
+                         "Revision":  16406,
+                         "MaxRevision":  0,
+                         "MinRevision":  16406
+                     },
+    "PSCompatibleVersions":  [
+                                 {
+                                     "Max":  1,
+                                     "Min":  0,
+                                     "Build":  -1,
+                                     "Revision":  -1,
+                                     "MaxRevision":  -1,
+                                     "MinRevision":  -1
+                                 },
+                                 {
+                                     "Max":  2,
+                                     "Min":  0,
+                                     "Build":  -1,
+                                     "Revision":  -1,
+                                     "MaxRevision":  -1,
+                                     "MinRevision":  -1
+                                 },
+                                 {
+                                     "Max":  3,
+                                     "Min":  0,
+                                     "Build":  -1,
+                                     "Revision":  -1,
+                                     "MaxRevision":  -1,
+                                     "MinRevision":  -1
+                                 },
+                                 {
+                                     "Max":  4,
+                                     "Min":  0,
+                                     "Build":  -1,
+                                     "Revision":  -1,
+                                     "MaxRevision":  -1,
+                                     "MinRevision":  -1
+                                 }
+                             ],
+    "PSRemotingProtocolVersion":  {
+                                      "Max":  2,
+                                      "Min":  2,
+                                      "Build":  -1,
+                                      "Revision":  -1,
+                                      "MaxRevision":  -1,
+                                      "MinRevision":  -1
+                                  }
+}

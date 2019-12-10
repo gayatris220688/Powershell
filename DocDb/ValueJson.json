@@ -1,0 +1,29 @@
+  {
+    "Id": 9,
+    "Name": "documentdb-collection-1",
+    "State": "Enabled",
+    "Region": "SouthCentralUS",
+    "MaxCapacity": 200,
+    "AvailableCapacity": 197,
+    "InternalSubscriptionId": "e0b81f36-36ba-44f7-b550-7c9344a35893",
+    "Capabilities": "DeviceManagement",
+    "MetaData": {
+      "Type": "DocumentDbCollection",
+      "CollectionName": "devicestore-col-1",
+      "QueryCollectionName": "querystore-col-1",
+      "ChangeFeedLeaseCollectionName": "changefeedleasestore",
+      "DatabaseName": "devicestore-db",
+      "AccountName": "dailystressdocdb",
+      "ConnectionString": "endpoint=https://dailystressdocdb.documents.azure.com:443/;authKeyType=PrimaryMasterKey;authKey=REDACTED",
+      "ResourceGroup": "privatesu-docdb",
+      "CollectionOfferThroughput": 400000,
+      "QueryCollectionOfferThroughput": 6500,
+      "ChangeFeedLeaseCollectionOfferThroughput": 1000,
+      "MaxIntervalInSeconds": 0,
+      "MaxStalenessPrefix": 0,
+      "Locations": null,
+      "LastKeyRollOverTime": null
+    },
+    "OwnerType": "IotHub",
+    "OwnerId": 0
+  }
